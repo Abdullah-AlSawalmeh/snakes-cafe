@@ -84,11 +84,9 @@ def user_input_handler(user_input, menu):
     if check_user_input_in_menu(user_input, menu) == True :
         show_user_input_details(user_input,menu)
     else:
-        print("")
-        print("This item is not on the menu, But we can order it for you")
+        print("\n This item is not on the menu, But we can order it for you")
         user_meal.append(f"{user_input[0].upper() + user_input[1:].lower()}")
-        print("")
-        print("Your menu consist of :")
+        print("\n Your menu consist of :")
         print(f'{textwrap.dedent(" ".join(user_meal))}')
         user_input= input("\n > ")
         user_input_handler(user_input,menu)
